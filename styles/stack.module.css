@@ -1,0 +1,81 @@
+.push {
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.button {
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    margin-top: 10px;
+    background-color: black;
+    color: white;
+
+}
+
+.input {
+    height: 35px;
+    border-radius: 5px;
+    width: 150px;
+    background-color: rgb(222, 222, 201);
+}
+
+.getTop {
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.buttonTop {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    height: 40px;
+
+
+}
+
+.pushItem {
+    border: 1px solid black;
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.p {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.length {
+    border: 1px solid black;
+    margin-top: 10px;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.buttonLength {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    height: 40px;
+
+
+}
+
+.empty {
+    border: 1px solid black;
+    margin-top: 10px;
+    border-radius: 4px;
+    padding: 10px;
+
+}

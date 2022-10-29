@@ -4,6 +4,7 @@ import { Toaster } from 'react-hot-toast';
 import { StackDetails } from '../Components/stackDetails';
 import { StackActions } from '../Components/stackActions';
 import styles from '../styles/main.module.css';
+/* java-stack-backend */
 
 
 const Home= () => {

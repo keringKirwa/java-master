@@ -6,7 +6,7 @@ export const StackActions = ({ setData }) => {
   const [itemToBeAdded, setItemToBeAdded] = useState("");
   const [topItem, setTopItem] = useState(null);
   const [length, setLength] = useState(null);
-  const [isEmpty, setIsEmpty] = useState(null);
+  const [isEmpty, setIsEmpty] = useState("");
   const [poppedItem, setPopItem] = useState(null);
 
   const handleSubmit = async () => {
@@ -33,7 +33,7 @@ export const StackActions = ({ setData }) => {
     const { data } = await axios.get(" http://localhost:8080/api/length");
     setLength(data);
   };
-  const isStackEmpty = async () => {
+  const setIsStackEmpty = async () => {
     const { data } = await axios.get("http://localhost:8080/api/isEmpty");
     console.log(data);
     setIsEmpty(data);
@@ -92,14 +92,14 @@ export const StackActions = ({ setData }) => {
         <button
           className={styles.buttonLength}
           type="button"
-          onClick={isStackEmpty}
+          onClick={setIsStackEmpty}
         >
           isEmpty()
         </button>
         {
           <p className={styles.pEmpty}>
             {" "}
-            is Empty :{false ? "True" : "False"}{" "}
+            is Empty :{isEmpty ? "True" : "False"}{" "}
           </p>
         }
       </div>

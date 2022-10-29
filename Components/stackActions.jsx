@@ -38,11 +38,19 @@ export const StackActions = ({ setData }) => {
     console.log(data);
     setIsEmpty(data);
   };
+
   const popItem = async () => {
-    const { data } = await axios.get("http://localhost:8080/api/pop");
-    console.log(data);
-    setData(data.reverse());
+    try {
+      const { data } = await axios.get("http://localhost:8080/api/pop");
+      console.log(data);
+      setData(data.reverse());
+    } catch (error) {
+      const message = error.message;
+      console.log(message);
+      console.log(error);
+    }
   };
+
   return (
     <div className={styles.push}>
       <div className={styles.pushItem}>

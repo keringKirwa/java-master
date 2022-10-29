@@ -6,10 +6,10 @@ import { StackActions } from '../Components/stackActions';
 import styles from '../styles/main.module.css';
 
 
-const Home= ({ stackData, error }) => {
+const Home= () => {
   const [item, setItem] = useState(10);
   const [data, setData] = useState([]);
-  console.log(stackData);
+  
   
   return (
     <div className={`${styles.main} `}>
@@ -33,19 +33,6 @@ const addItem = async () => {
     
 }
 
-Home.getInitialProps = async ctx => {
-  try {
-    const res = await axios.get('http://localhost:8080/api/top');
 
-      const stackData = res.data;
-      console.log(stackData);
-      return { stackData: stackData };
-      
-     
-  } catch (error) {
-      console.log(error);;
-    return { error };
-  }
-};
 
 export default Home;

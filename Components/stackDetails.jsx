@@ -19,9 +19,7 @@ export const StackDetails = ({ data, setData}) => {
     
     /* Note that both the row and the container all occupy full width. */
     if (data.length <= 0) {
-        return (
-            <div className={styles.empty}>The Stack is Empty</div>
-        )
+        return <div className={styles.emptyStack}>The Stack is Empty</div>;
  }
   return (
       <div className={styles.home}>
@@ -32,7 +30,11 @@ export const StackDetails = ({ data, setData}) => {
                       return;
                   }
                   else {
-                      return <div className={styles.boxItem}>{ item}</div>
+                      return (
+                        <div key={i} className={styles.boxItem}>
+                          {item}
+                        </div>
+                      );
                   }
                   
               }, this)}
